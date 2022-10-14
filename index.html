@@ -3,17 +3,33 @@
   <head>
     <title>Uslugi transportowe Sebastian Stepien</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/atomic.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <script src="./js/texts.js"></script>
+    <script>
+      const texts = getTexts(window.localStorage.getItem('lang'));
+    </script>
   </head>
   <body>
     <div id="shared-header"></div>
     <main>
-      Hello world
+      <h1 id="hello">
+        <script>
+          document.getElementById('hello').innerText = texts.common.hello;
+        </script>
+      </h1>
+      <div>
+        Set langs:
+        <button id="lang_pl"><img src="./img/pl.svg"></button>
+        <button id="lang_en"><img src="./img/gb.svg"></button>
+        <button id="lang_no"><img src="./img/no.svg"></button>
+      </div>
     </main>
     <div id="shared-footer"></div>
     <script src="./js/shared_header.js"></script>
     <script src="./js/shared_footer.js"></script>
+    <script src="./js/shared.js"></script>
   </body>
 </html>
