@@ -1,104 +1,79 @@
-const imgG = document.getElementById("imgGallery");
-const imgBox = document.getElementById("imgbox");
+const imgG = document.getElementsByClassName('imgSlide');
+const imgWrapper = document.getElementsByClassName('imgGallery_wrapper');
+const imgGallery = document.getElementsByClassName('imgGallery_img');
+const imgGallery_box = document.getElementsByClassName('imgGallery_box');
+
+const x = 0; //
 
 const imgList = [
-    "./Img/picture 1.png",
-    "./Img/picture 2.webp", //list of pictures
-    "./Img/picture 3.jpg",
-    "./Img/picture 4.webp"
+    './Img/Picture 1.png'
+    ,'./Img/picture 2.webp'
+    ,'./Img/picture 3.jpg'
+    ,'./Img/picture 4.webp'
 
 
 ];
 
-let normal = true; //used to see if the picture is zoomed in or not
-let imgI = 1;
-
-var imgTimer = () => { //switches the picture
+let imgI = 0;
 
 
-    imgG.src = imgList[imgI];
 
-    imgI++;
+let imgTimer = () => { //sets interval for picture change
 
-    if (imgI > imgList.length - 1) {
+
+
+
+    ++imgI;
+
+    if (imgI > imgList.length-1) {
         imgI = 0;
     }
 
+    imgG[x].src = imgList[imgI]; 
 
 };
 
-var interval = setInterval(imgTimer,2000);
+
+let interval = setInterval(imgTimer,2000);
 
 
-
-imgG.addEventListener("click",() => { //makes all the changes to make the image bigger
-
-    normal = false;
+imgG[x].addEventListener('click',() => {
 
     clearInterval(interval);
-    document.querySelectorAll("body > *:not([id*='container'])").forEach(i => { //blurs the rest of the page
+    imgWrapper[x].setAttribute('style','opacity:1;pointer-events:all;') //changes opacity and changes pointer-events
 
-        i.setAttribute("style","filter:blur(3px);");
-
-    });
-
-
-    imgBox.setAttribute("style","width:1000px; height:750px;");
-    imgG.setAttribute("style","width:1000px;");
-
-    imgG.nextElementSibling.setAttribute("style","display:inline-block");
-    imgG.previousElementSibling.setAttribute("style","display:inline-block");
-    
-
+    imgGallery[x].src = imgList[imgI];
 
 
 });
 
-imgG.nextElementSibling.addEventListener("click",() => { //the right and left buttons to switch between pictures in bigger picture
-    imgI++;
+
+
+imgGallery[x].nextElementSibling.addEventListener('click',() => { //right arrow to switch picture
+    ++imgI;
     if (imgI >= imgList.length) {
-        imgI = 0
+        imgI = 0;
     }
-    imgG.src = imgList[imgI];
+    imgGallery[x].src = imgList[imgI];
 
-})
+});
 
-imgG.previousElementSibling.addEventListener("click",() => {
-    imgI--;
+imgGallery[x].previousElementSibling.addEventListener('click',() => { //left arrow to switch picture
+    --imgI;
     if (imgI < 0) {
         imgI = imgList.length-1;
     }
-    imgG.src = imgList[imgI];
+    imgGallery[x].src = imgList[imgI];
 
-})
+});
 
- document.addEventListener("click",(event) => { //checks if user clicks outside of the imgbox element to revert the changes
+document.getElementsByClassName('invisible_div')[0].addEventListener('click', ()=> { //goes back to normal by clicking invisible div
+    imgWrapper[x].setAttribute('style','opacity:0;pointer-events:none;');
 
-    const clickOutside = imgBox.contains(event.target);
+    imgGallery[x].src = imgList[imgI];
+    imgG[x].src = imgList[imgI];
 
-    if ((!clickOutside) && (normal==false)) {
-
-
-        imgBox.setAttribute("style","width:400px; height:250px;");
-        imgG.setAttribute("style","width:400px;");
-        imgG.nextElementSibling.setAttribute("style","display:none");
-        imgG.previousElementSibling.setAttribute("style","display:none");
-
-        document.querySelectorAll("body > *:not([id*='container'])").forEach(i => {
-
-            i.setAttribute("style","filter:blur(0px);");
-        
-        });
-
-
-
-        normal = true;
-
-        interval = setInterval(imgTimer,2000);
-
-
-
-    }
+    interval = setInterval(imgTimer,2000);
 
 });
 

@@ -1,5 +1,6 @@
 body {
     background-color: aquamarine;
+    margin: 0px;
 }
 
 
@@ -9,42 +10,90 @@ header {
     font-size: 100px;
 }
 
-#imgbox {
-    width: 400px;
-    height: 250px;
-    margin: auto;
-    display:flex;
+
+
+.imgSlide {
+    display: block;
+    border: 2px solid black;
+    height: 400px;
+    width:  400px;
+    margin-left: auto;
+    margin-right: auto;
+
+
+
+}
+
+
+
+.imgGallery_wrapper {
+    display: flex;
+    justify-content: center;
     align-items: center;
 
-}
-#imgGallery {
-    border: 2px solid black;
+    position: fixed;
+    opacity: 0;
     height: 100%;
-    width:400px;
+    width:  100%;
+    background-color: grey;
+    pointer-events:none;
 
-
-    user-select: none;
+    
 
 }
 
-#buttonL {
+.imgGallery_box {
+    width: 100%;
+    height: 100%;
+    max-width: 1000px;
+    max-height: 750px;
+    display: flex;
+    z-index: 10;
+}
+
+.imgGallery_img {
+    flex-shrink: 0;
+    width: 90%;
+    height: 100%;
+    user-select: none;
+    
+    
+
+
+}
+
+
+.invisible_div {
+    width: 100%;
+    height:100%;
+    position: absolute;
+    z-index: 5;
+
+}
+
+
+.buttonL {
     height: 32px;
     width:  32px;
     margin:5px;
-    display: none;
+    display: inline-block;
+    align-self: center;
     
     
 
 }
 
-#buttonR {
+.buttonR {
     height: 32px;
     width:  32px;
     margin: 5px;
-    display: none;
+    display: inline-block;
+    align-self: center;
+
 
 
 
 }
+
 
 
