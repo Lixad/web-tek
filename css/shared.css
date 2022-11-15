@@ -48,3 +48,7 @@ a:hover {
 .active-link {
   color: #555;
 }
+
+p, li {
+  font-size: 20px;
+}
