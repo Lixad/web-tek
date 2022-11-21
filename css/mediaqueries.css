@@ -10,4 +10,11 @@
   .f-direction-rev {
     flex-direction: row-reverse;
   }
+  .w-img {
+    width: 40%;
+  }
+
+  h1 {
+    font-size: 64px;
+  }
 }
