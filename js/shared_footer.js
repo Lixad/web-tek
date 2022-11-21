@@ -1,18 +1,20 @@
 const footer = document.getElementById('shared-footer');
 footer.innerHTML = `
-  <footer class="d-flex jc-between">
+  <footer class="d-flex jc-between footer">
     <div class="d-flex f-col mx-15">
       <h4>${texts.footer.contact}</h4>
       <a href="tel:+48501549864">+48 501 549 864</a>
-      <a href="mailto:">DEJ MAILA</a>
+      <a href="mailto:transportstepien@onet.pl">transportstepien@onet.pl</a>
+      <a href="mailto:transportstepien1@gmail.com">transportstepien1@gmail.com</a>
+      NIP: 6621667643
     </div>
     <div class="d-flex f-col mx-15">
       <h4>${texts.footer.address}</h4>
-      Witosa 55,<br>
+      W. Witosa 55,<br>
       28-530 Skalbmierz,<br>
-      Poland
+      ${texts.footer.poland}
     </div>
-    <div>
+    <div class="footer-nav">
       <h4>${texts.footer.navigation}</h4>
       <ul class="d-flex">
         <div>

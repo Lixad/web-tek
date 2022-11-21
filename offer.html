@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/atomic.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/mediaqueries.css">
     <script src="./js/texts.js"></script>
     <script>
       const texts = getTexts(window.localStorage.getItem('lang'));
@@ -14,8 +15,30 @@
   </head>
   <body>
     <div id="shared-header"></div>
-    <main>
-      Offer page
+    <main class="px-10-vw">
+      <img src="img/photos/Screenshot 2022-11-09 at 00.54.25.png" class="d-block w-85p m-auto mb-20">
+      <p id="para1" class="bold">
+        <script>
+          document.getElementById('para1').innerText = texts.offer.para1;
+        </script>
+      </p>
+      <ul class="mb-20">
+        <li id="li-item-1">
+          <script>
+            document.getElementById('li-item-1').innerText = texts.offer.liItem1;
+          </script>
+        </li>
+        <li id="li-item-2">
+          <script>
+            document.getElementById('li-item-2').innerText = texts.offer.liItem2;
+          </script>
+        </li>
+        <li id="li-item-3">
+          <script>
+            document.getElementById('li-item-3').innerText = texts.offer.liItem3;
+          </script>
+        </li>
+      </ul>
     </main>
     <div id="shared-footer"></div>
     <script src="./js/shared_header.js"></script>
