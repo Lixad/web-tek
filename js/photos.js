@@ -2,20 +2,33 @@
 const imgWrapper = document.getElementsByClassName('imgGallery_wrapper');
 const imgGallery = document.getElementsByClassName('imgGallery_img');
 const photos_row = document.getElementById('photos-row');
-const photos = document.querySelectorAll('.photos');
+
 
 //declaring a few important variables
 const imgList = [];
-let images = photos_row.children;
 let imgI = 0;
 
-//makes a list of all the imge links
-for (let i = 0;i <= images.length-1;i++) {
-  let newImg = images.item(i);
-  imgList.push(newImg.src);
+//The number of pictures present
+const numberOfPictures = 19;
+ 
+//makes a list of all the img links and create the childelements and adds them to the div with photos-row
+for (let i = 1;i<numberOfPictures;i++) {
+
+  let newImg = document.createElement('img');
+  newImg.src = (`./img/photos_page/pic${i}.jpg`)
+  newImg.alt = i
+  newImg.className = 'photos'
+  imgList.push(newImg.src)
+  photos_row.appendChild(newImg);
+
 }
 
+
+
+
 //adds eventlisteners to each of the photos to check if they have been clicked(initiates the zoom)
+
+const photos = document.querySelectorAll('.photos');
 photos.forEach((imgG) => {
   imgG.addEventListener('click',() => {
     imgWrapper[0].setAttribute('style','opacity:1;pointer-events:all;');
@@ -46,5 +59,4 @@ imgGallery[0].previousElementSibling.addEventListener('click',() => {
 document.getElementsByClassName('invisible_div')[0].addEventListener('click', ()=> {
   imgWrapper[0].setAttribute('style','opacity:0;pointer-events:none;');
   imgGallery[0].src = imgList[imgI];
-  imgG[0].src = imgList[imgI];
 });
