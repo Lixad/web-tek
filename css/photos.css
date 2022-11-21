@@ -1,80 +1,61 @@
-
 #photos-row {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .photos {
-    max-height: 250px;
-    margin: 10px;
-  }
+  max-height: 250px;
+  margin: 10px;
+}
 
 .imgGallery_wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    position: fixed;
-    opacity: 0;
-    height: 100%;
-    width:  100%;
-    background-color: rgb(128, 128, 128,0.7);
-    pointer-events:none;
-
-    
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(128, 128, 128,0.7);
+  pointer-events:none;
 }
 
 .imgGallery_box {
-    max-width: 1000px;
-    min-width: 1000px;
-    max-height: 750px;
-    min-height: 750px;
-    display: flex;
-    z-index: 10;
+  display: flex;
+  max-width: 1000px;
+  min-width: 1000px;
+  max-height: 750px;
+  min-height: 750px;
+  z-index: 10;
 }
 
 .imgGallery_img {
-    max-width: 90%;
-    max-height: 90%;
-    display: block;
-    flex-shrink: 0;
-    user-select: none;
-    
-    
-
-
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  flex-shrink: 0;
+  user-select: none;
 }
-
 
 .invisible_div {
-    width: 100%;
-    height:100%;
-    position: absolute;
-    z-index: 5;
-
+  width: 100%;
+  height:100%;
+  position: absolute;
+  z-index: 5;
 }
 
-
 .buttonL {
-    height: 32px;
-    width:  32px;
-    margin:5px;
-    display: inline-block;
-    align-self: center;
-    
-    
-
+  display: inline-block;
+  height: 32px;
+  width:  32px;
+  margin:5px;
+  align-self: center;
 }
 
 .buttonR {
-    height: 32px;
-    width:  32px;
-    margin: 5px;
-    display: inline-block;
-    align-self: center;
-
-
-
-
+  display: inline-block;
+  height: 32px;
+  width:  32px;
+  margin: 5px;
+  align-self: center;
 }
