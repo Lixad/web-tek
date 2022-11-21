@@ -58,6 +58,16 @@ const en = {
       para2: `We make sure that our staff is properly trained in terms of content and technology. We support our 
         employees in personal development`
     },
+    contact: {
+      founder: 'Founder and CEO - Sebastian Stępień',
+      cfo: 'CFO and Project Manager - Marianna Stępień',
+      manager: 'International Relations Manager - Weronika Stępień',
+      address: 'Company address:',
+      country: 'Poland',
+      open: 'Opening hours:',
+      monToFri: 'MON-FR: ',
+      sat: 'SAT: ',
+    },
 };
 
 const no = {

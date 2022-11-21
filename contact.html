@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/atomic.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/form.css">
     <script src="./js/texts.js"></script>
     <script>
       const texts = getTexts(window.localStorage.getItem('lang'));
@@ -15,11 +16,75 @@
   <body>
     <div id="shared-header"></div>
     <main>
-      Contact page
+      <div class="contact-data">
+        <p id="founder">
+          <script>
+            document.getElementById('founder').innerText = texts.contact.founder;
+          </script>
+          <a href="mailto:transportstepien@onet.pl" class="bold">transportstepien@onet.pl</a>
+          <a href="tel:+48501549864">+48 501 549 864</a>
+        </p>
+        <p id="cfo">
+          <script>
+            document.getElementById('cfo').innerText = texts.contact.cfo;
+          </script>
+          <a href="mailto:marysias@vp.pl" class="bold">marysias@vp.pl</a>
+          <a href="tel:+48509567239">+48 509 567 239</a>
+        </p>
+        <p id="manager">
+          <script>
+            document.getElementById('manager').innerText = texts.contact.manager;
+          </script>
+          <a href="mailto:weronika.marianna.stepien@gmail.com" class="bold">weronika.marianna.stepien@gmail.com</a>
+        </p>
+        <p id="company-address">
+          <script>
+            document.getElementById('company-address').innerText = texts.contact.address;
+          </script>
+          W.Witosa 55<br> 
+          28 - 530 Skalbmierz<br>
+          Poland
+        </p>
+        <p id="open-hours">
+          <script>
+            document.getElementById('open-hours').innerText = texts.contact.open;
+          </script>
+          <span id="mon-fri">
+            <script>
+              document.getElementById('mon-fri').innerText = texts.contact.monToFri;
+            </script>
+            8:00 - 16:00
+          </span>
+          <span id="sat-hours">
+            <script>
+              document.getElementById('sat-hours').innerText = texts.contact.sat;
+            </script>
+            8:00 - 12:00
+          </span>
+        </p>
+      </div>
+      <form id="contactForm" class="contact-form">
+        <label class="left20" for="name">Name:</label><br>
+        <input class="input1" type="text" id="name" name="name" maxlength="100" autofocus><br><br>
+        
+        <label class="left20" for="email">Email:</label><br>
+        <input class="input1" type="email" id="email" name="email" required><br><br>
+
+        <label class="left20"for="number">Number (optional):</label> <br>
+        <input class="input1" type="tel" id="number" name="number" pattern="[0-9]{8}"><br><br>
+
+        <label class="left20" for="subject">Subject:</label><br>
+        <textarea class="inputArea" type="text" id="subject" name="subject"> </textarea>
+        <br><br>
+
+        <input class="left50" type="submit" id="button" value="Submit" onclick="saveFile()" />
+
+      </form>
     </main>
     <div id="shared-footer"></div>
     <script src="./js/shared_header.js"></script>
     <script src="./js/shared_footer.js"></script>
     <script src="./js/shared.js"></script>
+    <script src="./js/form.js"> </script>
   </body>
 </html>
