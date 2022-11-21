@@ -22,18 +22,16 @@
 
 .imgGallery_box {
   display: flex;
-  max-width: 1000px;
-  min-width: 1000px;
-  max-height: 750px;
-  min-height: 750px;
+  max-width: 90%;
+  min-width: 90%;
+  max-height: 75%;
   z-index: 10;
 }
 
 .imgGallery_img {
   display: block;
+  height: auto;
   max-width: 90%;
-  max-height: 90%;
-  flex-shrink: 0;
   user-select: none;
 }
 
@@ -45,17 +43,17 @@
 }
 
 .buttonL {
-  display: inline-block;
-  height: 32px;
-  width:  32px;
+  display: block;
+  height: auto;
+  width:  5%;
   margin:5px;
   align-self: center;
 }
 
 .buttonR {
-  display: inline-block;
-  height: 32px;
-  width:  32px;
+  display: block;
+  height: auto;
+  width:  5%;
   margin: 5px;
   align-self: center;
 }
