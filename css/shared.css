@@ -117,3 +117,26 @@ p, li {
   right: 0px;
   transition: 0.5s;
 }
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+  }
+
+  .footer .mx-15 {
+    margin: 20px 0;
+  }
+
+  .footer-nav ul {
+    flex-direction: column;
+  }
+
+  .footer-nav ul .mx-15 {
+    margin: 0;
+  }
+}

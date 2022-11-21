@@ -18,9 +18,9 @@ for (let i = 0;i <= images.length-1;i++) {
 //adds eventlisteners to each of the photos to check if they have been clicked(initiates the zoom)
 photos.forEach((imgG) => {
   imgG.addEventListener('click',() => {
-  imgWrapper[0].setAttribute('style','opacity:1;pointer-events:all;');
-  imgGallery[0].src = imgG.src;
-  imgI = parseInt(imgG.alt);
+    imgWrapper[0].setAttribute('style','opacity:1;pointer-events:all;');
+    imgGallery[0].src = imgG.src;
+    imgI = parseInt(imgG.alt);
   });
 });
 

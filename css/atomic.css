@@ -61,6 +61,10 @@
   width: 100%;
 }
 
+.w-max-80 {
+  max-width: 80%;
+}
+
 .m-auto {
   margin: 0 auto;
 }

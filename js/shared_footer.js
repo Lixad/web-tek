@@ -1,6 +1,6 @@
 const footer = document.getElementById('shared-footer');
 footer.innerHTML = `
-  <footer class="d-flex jc-between">
+  <footer class="d-flex jc-between footer">
     <div class="d-flex f-col mx-15">
       <h4>${texts.footer.contact}</h4>
       <a href="tel:+48501549864">+48 501 549 864</a>
