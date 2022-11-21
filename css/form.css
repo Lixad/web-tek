@@ -1,29 +1,15 @@
-
 .input1 {
-    width: 60%;
-    margin-left:20% ;
-    padding: 0.4em 0.4em 0.4em 0;
-    box-sizing: border-box;
-  }
-
-
-.inputArea{
-    width: 60%;
-    margin-left:20% ;
-    height: 200px;
-    padding: 0.4em 0.4em 0.4em 0;
-    box-sizing: border-box;
-    resize: none;
-    
-  }
-
-.left20{
-    margin-left: 20%;
+  width: 100%;
+  padding: 0.4em 0.4em 0.4em 0;
+  box-sizing: border-box;
 }
 
-.left50{
-    margin-left: 45%;
-    width: 10%;
+.inputArea{
+  width: 100%;
+  height: 200px;
+  padding: 0.4em 0.4em 0.4em 0;
+  box-sizing: border-box;
+  resize: none;
 }
 
 .contact-form input {
@@ -40,6 +26,26 @@
 }
 
 .contact-form input[type=submit] {
+  display: block;
+  margin: 0 auto;
   color: #fff;
   background-color: #52221e;
+}
+
+.contact-data {
+  display: flex;
+  flex-flow: column;
+  width: 60%;
+  margin: 0 auto;
+}
+
+.contact-data p {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+form {
+  width: 60%;
+  margin: 50px auto;
 }
