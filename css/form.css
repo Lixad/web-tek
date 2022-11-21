@@ -1,0 +1,27 @@
+
+.input1 {
+    width: 60%;
+    margin-left:20% ;
+    padding: 0.4em 0.4em 0.4em 0;
+    box-sizing: border-box;
+  }
+
+
+  .inputArea{
+    width: 60%;
+    margin-left:20% ;
+    height: 200px;
+    padding: 0.4em 0.4em 0.4em 0;
+    box-sizing: border-box;
+    resize: none;
+    
+  }
+
+.left20{
+    margin-left: 20%;
+}
+
+.left50{
+    margin-left: 45%;
+    width: 10%;
+}

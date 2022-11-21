@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/atomic.css">
     <link rel="stylesheet" href="./css/shared.css">
+    <link rel="stylesheet" href="./css/form.css">
     <script src="./js/texts.js"></script>
     <script>
       const texts = getTexts(window.localStorage.getItem('lang'));
@@ -15,11 +16,33 @@
   <body>
     <div id="shared-header"></div>
     <main>
-      Contact page
+
+      <form id="contactForm">
+        <label class="left20" for="name">Name:</label><br>
+        <input class="input1" type="text" id="name" name="name" maxlength="100" autofocus><br><br>
+        
+        <label class="left20" for="email">Email:</label><br>
+        <input class="input1" type="email" id="email" name="email" required><br><br>
+
+        <label class="left20"for="number">Number (optional):</label> <br>
+        <input class="input1" type="tel" id="number" name="number" pattern="[0-9]{8}"><br><br>
+
+
+        <label class="left20" for="subject">Subject:</label><br>
+        <textarea class="inputArea" type="text" id="subject" name="subject"> </textarea>
+        <br><br>
+        
+
+        <input class="left50" type="button" id="button" value="Submit" onclick="saveFile()" />
+
+
+      </form>
+
     </main>
     <div id="shared-footer"></div>
     <script src="./js/shared_header.js"></script>
     <script src="./js/shared_footer.js"></script>
     <script src="./js/shared.js"></script>
+    <script src="./js/form.js"> </script>
   </body>
 </html>
