@@ -25,9 +25,6 @@ footer.innerHTML = `
             <a href="offer.html">${texts.links.offer}</a>
           </li>
           <li>
-            <a href="cars_for_sale.html">${texts.links.cars}</a>
-          </li>
-          <li>
             <a href="career.html">${texts.links.career}</a>
           </li>
         </div>

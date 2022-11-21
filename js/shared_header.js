@@ -11,7 +11,6 @@ const renderHeader = () => {
         <a href="index.html" class="d-flex ai-center px-10 py-5 mx-15"><img src="./img/logo.jpg" alt="Company logo" class="logo-header"></a>
         <div class="d-flex">
           <a href="offer.html" class="d-flex ai-center px-10 py-5 mx-15 bold">${texts.links.offer}</a>
-          <a href="cars_for_sale.html" class="d-flex ai-center px-10 py-5 mx-15 bold">${texts.links.cars}</a>
           <a href="career.html" class="d-flex ai-center px-10 py-5 mx-15 bold">${texts.links.career}</a>
           <a href="about.html" class="d-flex ai-center px-10 py-5 mx-15 bold">${texts.links.about}</a>
           <a href="photos.html" class="d-flex ai-center px-10 py-5 mx-15 bold">${texts.links.photos}</a>
@@ -20,11 +19,9 @@ const renderHeader = () => {
         <div>
           <button id="lang_pl"><img src="./img/pl.svg"></button>
           <button id="lang_en"><img src="./img/gb.svg"></button>
-          <button id="lang_no"><img src="./img/no.svg"></button>
         </div>
       </header>
     `;
-    document.getElementById('lang_no').addEventListener('click', () => setLang('no'));
     document.getElementById('lang_pl').addEventListener('click', () => setLang('pl'));
     document.getElementById('lang_en').addEventListener('click', () => setLang('en'));
 
@@ -39,7 +36,6 @@ const renderHeader = () => {
           <button id="hamburger" type="button" class="hamburger-wrapper"><div class="hamburger"></div></button>
           <div class="mobile-menu">
             <a href="offer.html" class="d-flex ai-center py-5 bold">${texts.links.offer}</a>
-            <a href="cars_for_sale.html" class="d-flex ai-center py-5 bold">${texts.links.cars}</a>
             <a href="career.html" class="d-flex ai-center py-5 bold">${texts.links.career}</a>
             <a href="about.html" class="d-flex ai-center py-5 bold">${texts.links.about}</a>
             <a href="photos.html" class="d-flex ai-center py-5 bold">${texts.links.photos}</a>
@@ -49,7 +45,6 @@ const renderHeader = () => {
       </header>
     `;
 
-    document.getElementById('lang_no_mobile').addEventListener('click', () => setLang('no'));
     document.getElementById('lang_pl_mobile').addEventListener('click', () => setLang('pl'));
     document.getElementById('lang_en_mobile').addEventListener('click', () => setLang('en'));
 
