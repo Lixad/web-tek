@@ -6,7 +6,6 @@ const photos_row = document.getElementById('photos-row');
 
 //declaring a few important variables
 const imgList = [];
-let images = photos_row.children;
 let imgI = 0;
 
 //The number of pictures present
