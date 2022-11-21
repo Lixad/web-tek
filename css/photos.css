@@ -27,14 +27,16 @@
 
 .imgGallery_box {
     max-width: 1000px;
+    min-width: 1000px;
     max-height: 750px;
+    min-height: 750px;
     display: flex;
     z-index: 10;
 }
 
 .imgGallery_img {
     max-width: 90%;
-    max-height: 100%;
+    max-height: 90%;
     display: block;
     flex-shrink: 0;
     user-select: none;
