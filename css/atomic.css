@@ -22,6 +22,14 @@
   flex-flow: column;
 }
 
+.f-row-rev {
+  flex-direction: row-reverse;
+}
+
+.f-col-gap-5 {
+  column-gap: 5vw;
+}
+
 .px-10 {
   padding-left: 10px;
   padding-right: 10px;
@@ -39,4 +47,32 @@
 
 .bold {
   font-weight: 700;
+}
+
+.w-30 {
+  width: 30vw;
+}
+
+.w-100p {
+  width: 100%;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+.pt-20 {
+  padding-top: 20px;
+}
+
+.p-15 {
+  padding: 15px;
+}
+
+.px-10-vw {
+  padding: 0 10vw;
+}
+
+.my-25 {
+  margin: 25px 0;
 }
