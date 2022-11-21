@@ -2,6 +2,10 @@
   display: flex;
 }
 
+.d-block {
+  display: block;
+}
+
 .jc-center {
   justify-content: center;
 }
@@ -75,4 +79,8 @@
 
 .my-25 {
   margin: 25px 0;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
 }

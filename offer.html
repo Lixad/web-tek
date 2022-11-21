@@ -17,30 +17,28 @@
     <div id="shared-header"></div>
     <main class="m-auto">
       <img src="img/photos/Screenshot 2022-11-09 at 00.54.25.png">
-      <p>
-        Text1Brief information about the services offered by the compan and how to
-        contact the company in orderto obtain information such as:
+      <p id="para1">
+        <script>
+          document.getElementById('para1').innerText = texts.offer.para1;
+        </script>
       </p>
-      <p>
-        transport valuation
-        shipping quote
-        information about trucks and trailers sold
-        information about the countries in which the company will cooperate
-      </p>
-      <p>
-        Brief information about the serviceso ffered by the company and how to contact
-        the company in order to obtain information such as
-      </p>
-      <p>
-        transport valuation
-        shipping quote
-        information about trucks and trailers sold
-        information about the countries in which the company will cooperate
-      </p>
-      <p>
-        Brief information about the serviceso ffered by the company and how to contact
-        the company in order to obtain information such as
-      </p>
+      <ul>
+        <li id="li-item-1">
+          <script>
+            document.getElementById('li-item-1').innerText = texts.offer.liItem1;
+          </script>
+        </li>
+        <li id="li-item-2">
+          <script>
+            document.getElementById('li-item-2').innerText = texts.offer.liItem2;
+          </script>
+        </li>
+        <li id="li-item-3">
+          <script>
+            document.getElementById('li-item-3').innerText = texts.offer.liItem3;
+          </script>
+        </li>
+      </ul>
     </main>
     <div id="shared-footer"></div>
     <script src="./js/shared_header.js"></script>
